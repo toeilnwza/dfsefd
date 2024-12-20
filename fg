@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คลิกที่นี่</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        .message {
+            display: none;
+            text-align: center;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <button class="button" onclick="revealMessage()">คลิกที่นี่</button>
+        <div class="message" id="message">
+            <h1>พี่อิงอรน่ารักจุงกะเบย ❤️</h1>
+        </div>
+    </div>
+
+    <script>
+        function revealMessage() {
+            document.getElementById('message').style.display = 'block';
+            document.querySelector('.button').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
